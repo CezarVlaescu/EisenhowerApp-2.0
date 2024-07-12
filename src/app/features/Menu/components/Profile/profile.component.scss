@@ -1,0 +1,21 @@
+.profile-container{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
+    &__profile-picture{
+        display: flex;
+
+        &__inner{
+           width: 3.7rem;
+           height: 4.5rem;
+           border-radius: 30%;
+        }
+    }
+
+    &__profile-name{
+       flex: 1;
+       display: flex;
+       justify-content: center;
+    }
+}

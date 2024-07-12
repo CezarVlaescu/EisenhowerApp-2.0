@@ -1,0 +1,14 @@
+.menu-container {
+    padding: 22px;
+    height: 83.5vh;
+    display: flex;
+    gap: 70px;
+    flex-direction: column;
+
+    &__menu-elements{
+        align-self: flex-start;
+        align-items: normal;
+        display: flex;
+        height: 70%;
+    }
+}

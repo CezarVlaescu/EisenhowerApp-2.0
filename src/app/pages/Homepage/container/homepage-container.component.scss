@@ -1,0 +1,16 @@
+.home-container {
+    display: flex;
+    border: 1px solid var(--color-dark);
+    width: 94vw;
+    height: 89vh;
+
+    &__left-menu {
+        flex: 0 0 18%;
+        border: 2px solid black;
+    }
+
+    &__right-tasks {
+        flex: 1;
+        border: 2px solid black;
+    }
+}
