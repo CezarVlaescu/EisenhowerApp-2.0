@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 
 // Components
 import { HomepageModule } from '../pages/Homepage/homepage.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { HomepageModule } from '../pages/Homepage/homepage.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HomepageModule
+    HomepageModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
