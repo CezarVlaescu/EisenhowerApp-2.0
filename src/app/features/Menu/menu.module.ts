@@ -15,7 +15,6 @@ import {MatBadgeModule} from '@angular/material/badge';
   ],
   imports: [
     CommonModule,
-    SharedComponentsModule,
     MatBadgeModule
   ],
   exports: [

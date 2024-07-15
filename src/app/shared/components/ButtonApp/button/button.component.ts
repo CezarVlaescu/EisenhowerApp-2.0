@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 type ButtonObject = {
   name: string;
@@ -11,14 +11,8 @@ type ButtonObject = {
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent {
+  @Input() buttonAddTask = new Array<ButtonObject>();
   constructor() {
   }
 
-  public namePage : string | undefined;
-  public linkPage : string | undefined;
-  
-  public generateButton({name, link}: ButtonObject) : void {
-    this.namePage = name;
-    this.linkPage = link;
-  }
 }

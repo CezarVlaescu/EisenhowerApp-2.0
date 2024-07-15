@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component} from '@angular/core';
 
 type linkInput = {
   name: string;
@@ -10,15 +10,9 @@ type linkInput = {
   templateUrl: './tasks-container.component.html',
   styleUrls: ['./tasks-container.component.scss']
 })
-export class TasksContainerComponent {
-  @Output() taskButtonEmitter = new EventEmitter();
-
-  public taskButton : linkInput = {
-    name: 'Add Task',
-    link: 'addtask'
-  }
-
-  getTaskButtonDetails() : void {
-    this.taskButtonEmitter.emit(this.taskButton);
+export class TasksContainerComponent { 
+  public buttonAddTask: linkInput = {
+    name: 'Add your task',
+    link: '/addtask'
   }
 }

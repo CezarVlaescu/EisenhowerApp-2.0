@@ -1,3 +1,6 @@
 <div class="button-container">
-    <p style="color: white">{{namePage}}</p>
+    <p style="color: white; margin: 0px">Button</p>
+    <div *ngFor="let buttonProp of buttonAddTask">
+        {{buttonProp.name}} 
+    </div>
 </div>
