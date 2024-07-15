@@ -15,7 +15,8 @@ import {MatBadgeModule} from '@angular/material/badge';
   ],
   imports: [
     CommonModule,
-    MatBadgeModule
+    MatBadgeModule,
+    SharedComponentsModule
   ],
   exports: [
     MenuContainerComponent,
@@ -23,4 +24,5 @@ import {MatBadgeModule} from '@angular/material/badge';
     ProfileComponent
   ]
 })
+
 export class MenuModule { }

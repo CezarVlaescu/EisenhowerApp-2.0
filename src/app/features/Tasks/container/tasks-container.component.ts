@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 
-type linkInput = {
+type ButtonObject = {
   name: string;
   link: string;
 }
@@ -10,9 +10,9 @@ type linkInput = {
   templateUrl: './tasks-container.component.html',
   styleUrls: ['./tasks-container.component.scss']
 })
-export class TasksContainerComponent { 
-  public buttonAddTask: linkInput = {
-    name: 'Add your task',
-    link: '/addtask'
+export class TasksContainerComponent {
+  public buttonInput: ButtonObject = {
+    name: 'Add Task',
+    link: 'addtask'
   }
 }

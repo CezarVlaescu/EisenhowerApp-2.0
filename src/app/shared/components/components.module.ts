@@ -9,7 +9,6 @@ import { TasksModule } from 'src/app/features/Tasks/tasks.module';
   ],
   imports: [
     CommonModule,
-    TasksModule,
   ],
   exports: [
     ButtonComponent

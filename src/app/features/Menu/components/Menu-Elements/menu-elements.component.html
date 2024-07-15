@@ -1,7 +1,5 @@
 <div class="menu-elements-container">
-    <app-button></app-button>
-    <app-button></app-button>
-    <app-button></app-button>
-    <app-button></app-button>
-    <app-button></app-button>
+    <div *ngFor="let item of menuItems">
+        <app-button [button]="item"></app-button>
+    </div>
 </div>

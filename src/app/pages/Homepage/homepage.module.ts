@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomepageContainerComponent } from './container/homepage-container.component';
 import { MenuModule } from 'src/app/features/Menu/menu.module';
 import { TasksModule } from 'src/app/features/Tasks/tasks.module';
+import { SharedComponentsModule } from 'src/app/shared/components/components.module';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { TasksModule } from 'src/app/features/Tasks/tasks.module';
     CommonModule,
     TasksModule,
     MenuModule,
+    SharedComponentsModule
   ],
   exports: [
     HomepageContainerComponent

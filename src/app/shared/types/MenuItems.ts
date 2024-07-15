@@ -1,4 +1,4 @@
-export const linksPages : Array<{name: string, link: string | null}> = [
+export const MenuItems = [
     {
         name: 'Home',
         link: "homepage", 
@@ -23,8 +23,4 @@ export const linksPages : Array<{name: string, link: string | null}> = [
         name: "Logout",
         link: "logout"
     },
-    {
-        name: "Add a task",
-        link: "addtask"
-    }
 ]

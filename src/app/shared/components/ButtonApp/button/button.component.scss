@@ -2,10 +2,10 @@
     width: 100%;
     min-width: 10vw;
     min-height: 4vh;
-    background-image: var(--gradient-ocean-blue);
+    background-image: var(--gradient-peacock);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10%;
-    margin: 0;
+    box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
 }

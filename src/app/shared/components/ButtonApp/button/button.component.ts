@@ -11,8 +11,6 @@ type ButtonObject = {
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent {
-  @Input() buttonAddTask = new Array<ButtonObject>();
-  constructor() {
-  }
+  @Input() button!: ButtonObject;
 
 }

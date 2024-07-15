@@ -9,7 +9,7 @@ import { SharedComponentsModule } from 'src/app/shared/components/components.mod
   ],
   imports: [
     CommonModule,
-    SharedComponentsModule
+    SharedComponentsModule,
   ],
   exports: [
     TasksContainerComponent
