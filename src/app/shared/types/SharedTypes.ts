@@ -1,4 +1,4 @@
-type TTaskType = "DO" | "DECIDE" | "DELEGATE" | "DELETE";
+export type TTaskType = "DO" | "DECIDE" | "DELEGATE" | "DELETE";
 
 export type TTask = {
     id?: number;

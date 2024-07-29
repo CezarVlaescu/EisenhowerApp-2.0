@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomepageContainerComponent } from './container/homepage-container.component';
 import { MenuModule } from 'src/app/features/Menu/menu.module';
 import { TasksModule } from 'src/app/features/Tasks/tasks.module';
-import { SharedComponentsModule } from 'src/app/shared/components/sharedComponents.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { SharedComponentsModule } from 'src/app/shared/components/sharedComponen
     CommonModule,
     TasksModule,
     MenuModule,
-    SharedComponentsModule
+    SharedModule
   ],
   exports: [
     HomepageContainerComponent

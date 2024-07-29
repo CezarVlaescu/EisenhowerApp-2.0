@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TasksContainerComponent } from './container/tasks-container.component';
-import { SharedComponentsModule } from 'src/app/shared/components/sharedComponents.module';
 import { MatDialogModule } from '@angular/material/dialog';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +10,7 @@ import { MatDialogModule } from '@angular/material/dialog';
   ],
   imports: [
     CommonModule,
-    SharedComponentsModule,
+    SharedModule,
     MatDialogModule
   ],
   exports: [

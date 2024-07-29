@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { MenuContainerComponent } from './container/menu-container.component';
 import { MenuElementsComponent } from './components/Menu-Elements/menu-elements.component';
 import { ProfileComponent } from './components/Profile/profile.component';
-import { SharedComponentsModule } from 'src/app/shared/components/sharedComponents.module';
+
 import {MatBadgeModule} from '@angular/material/badge';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import {MatBadgeModule} from '@angular/material/badge';
   imports: [
     CommonModule,
     MatBadgeModule,
-    SharedComponentsModule
+    SharedModule
   ],
   exports: [
     MenuContainerComponent,

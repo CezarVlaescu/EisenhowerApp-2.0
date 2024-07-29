@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core';
-import { TTask } from 'src/types/SharedTypes';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { TTask } from '../../types/SharedTypes';
 
 @Component({
   selector: 'app-dialog',
@@ -23,7 +23,7 @@ export class DialogComponent {
   }
 
   public toggleComment(isCommented: boolean): void {
-    this.task.isCommented = isCommented;
+    this.task.isCommented = isCommented; // true 
   }
 
   onNoClick() : void {

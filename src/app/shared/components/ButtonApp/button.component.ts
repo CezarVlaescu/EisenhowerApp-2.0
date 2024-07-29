@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { ButtonObject } from 'src/types/SharedTypes';
+import { ButtonObject } from '../../types/SharedTypes';
+
 
 @Component({
   selector: 'app-button',

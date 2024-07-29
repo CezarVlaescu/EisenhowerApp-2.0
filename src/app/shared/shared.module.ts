@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ButtonComponent } from './ButtonApp/button.component';
 
-import { DialogComponent } from './DialogPopUp/dialog.component';
+import { ButtonComponent } from './components/ButtonApp/button.component';
+import { DialogComponent } from './components/DialogPopUp/dialog.component';
+import { TableTasksComponent } from './components/TableTasks/tabletasks.component';
 
 import {FormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
@@ -11,11 +12,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatTableModule} from '@angular/material/table'
 
 @NgModule({
   declarations: [
+    DialogComponent,
     ButtonComponent,
-    DialogComponent
+    TableTasksComponent
   ],
   imports: [
     CommonModule,
@@ -25,12 +28,14 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatInputModule,
     MatDialogModule,
     MatRadioModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatTableModule
 
   ],
   exports: [
+    DialogComponent,
     ButtonComponent,
-    DialogComponent
+    TableTasksComponent
   ]
 })
-export class SharedComponentsModule { }
+export class SharedModule { }

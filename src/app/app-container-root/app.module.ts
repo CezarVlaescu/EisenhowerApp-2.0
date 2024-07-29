@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 // Components
 import { HomepageModule } from '../pages/Homepage/homepage.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SharedComponentsModule } from '../shared/components/sharedComponents.module';
+import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,9 +16,10 @@ import { SharedComponentsModule } from '../shared/components/sharedComponents.mo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HomepageModule,
     BrowserAnimationsModule,
-    SharedComponentsModule
+    SharedModule,
+    HttpClientModule,
+    HomepageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
