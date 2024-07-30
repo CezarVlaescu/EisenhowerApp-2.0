@@ -74,5 +74,12 @@ export const tasks: TTask[] = [
         hour: new Date(2024, 6, 30, 18, 0),
         type: "DO",
         isCommented: false
-    }
+    },
+    {
+        id: 11,
+        name: "End of Day Wrap-Up End of Day Wrap-Up",
+        hour: new Date(2024, 6, 30, 18, 0),
+        type: "DO",
+        isCommented: false
+    },
 ];

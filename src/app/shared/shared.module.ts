@@ -12,13 +12,14 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatTableModule} from '@angular/material/table'
-
+import {MatTableModule} from '@angular/material/table';
+import { FormatterPipe } from './pipes/formatter.pipe';
 @NgModule({
   declarations: [
     DialogComponent,
     ButtonComponent,
-    TableTasksComponent
+    TableTasksComponent,
+    FormatterPipe,
   ],
   imports: [
     CommonModule,
@@ -35,7 +36,8 @@ import {MatTableModule} from '@angular/material/table'
   exports: [
     DialogComponent,
     ButtonComponent,
-    TableTasksComponent
+    TableTasksComponent,
+    FormatterPipe
   ]
 })
 export class SharedModule { }
