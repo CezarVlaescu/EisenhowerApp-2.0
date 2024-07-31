@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from 'src/app/shared/components/DialogPopUp/dialog.component';
-import { AddTaskServiceService } from 'src/app/shared/services/addTask/add-task-service.service';
+import { AddTaskServiceService } from 'src/app/shared/services/api/addTask/add-task-service.service';
 import { ButtonObject, TTask } from 'src/app/shared/types/SharedTypes';
 
 @Component({

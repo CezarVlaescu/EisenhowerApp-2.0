@@ -7,5 +7,5 @@ import { MenuItems } from 'src/app/shared/types/MenuItems';
   styleUrls: ['./menu-elements.component.scss']
 })
 export class MenuElementsComponent {
-   public menuItems = MenuItems;
+  public menuItems = MenuItems;
 }

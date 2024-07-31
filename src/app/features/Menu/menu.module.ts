@@ -6,18 +6,28 @@ import { ProfileComponent } from './components/Profile/profile.component';
 
 import {MatBadgeModule} from '@angular/material/badge';
 import { SharedModule } from 'src/app/shared/shared.module';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+import { BurgerMenuMobileComponent } from './components/Menu-Elements/menu-mobile/burger-menu-mobile.component';
 
 
 @NgModule({
   declarations: [
     MenuContainerComponent,
     MenuElementsComponent,
-    ProfileComponent
+    ProfileComponent,
+    BurgerMenuMobileComponent
   ],
   imports: [
     CommonModule,
     MatBadgeModule,
-    SharedModule
+    SharedModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatMenuModule
   ],
   exports: [
     MenuContainerComponent,

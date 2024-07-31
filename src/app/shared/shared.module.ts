@@ -14,12 +14,14 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatTableModule} from '@angular/material/table';
 import { FormatterPipe } from './pipes/formatter.pipe';
+import { ScreenSizeDirective } from './directives/screen-size.directive';
 @NgModule({
   declarations: [
     DialogComponent,
     ButtonComponent,
     TableTasksComponent,
     FormatterPipe,
+    ScreenSizeDirective,
   ],
   imports: [
     CommonModule,
@@ -37,7 +39,8 @@ import { FormatterPipe } from './pipes/formatter.pipe';
     DialogComponent,
     ButtonComponent,
     TableTasksComponent,
-    FormatterPipe
+    FormatterPipe,
+    ScreenSizeDirective,
   ]
 })
 export class SharedModule { }

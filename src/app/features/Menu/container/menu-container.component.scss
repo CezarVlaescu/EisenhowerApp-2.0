@@ -12,3 +12,9 @@
         height: 70%;
     }
 }
+
+@media (max-width: 1050px) {
+    .menu-container {
+        flex-direction: row-reverse;
+    }
+}

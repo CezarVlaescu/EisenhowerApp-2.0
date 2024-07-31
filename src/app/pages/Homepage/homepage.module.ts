@@ -4,10 +4,12 @@ import { HomepageContainerComponent } from './container/homepage-container.compo
 import { MenuModule } from 'src/app/features/Menu/menu.module';
 import { TasksModule } from 'src/app/features/Tasks/tasks.module';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { HomepageMobileViewComponent } from './container-mobile/homepage-mobile-view.component';
 
 @NgModule({
   declarations: [
-    HomepageContainerComponent
+    HomepageContainerComponent,
+    HomepageMobileViewComponent
   ],
   imports: [
     CommonModule,
