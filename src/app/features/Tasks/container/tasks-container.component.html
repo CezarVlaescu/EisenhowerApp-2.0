@@ -1,21 +1,35 @@
 <div class="tasks-container">
+  <ng-container *appScreenSize="'desktop'">
     <div class="tasks-container__top-part">
-        <div class="tasks-container__top-part__content">
-            <h1>Current day : Vineri 12/07/2024</h1>
-            <h1>Motto of the day: Never give up, always fight</h1>
-            <app-button [button]="buttonInput" (buttonClicked)="openDialog()"></app-button>
-        </div>
+      <div class="tasks-container__top-part__content">
+        <h1>Current day : Vineri 12/07/2024</h1>
+        <h1>Motto of the day: Never give up, always fight</h1>
+        <app-button
+          [button]="buttonInput"
+          (buttonClicked)="openDialog()"
+        ></app-button>
+      </div>
     </div>
     <div class="tasks-container__bottom-part">
-        <div class="tasks-container__bottom-part__left-tables">
-            <div class="tasks-container__bottom-part__left-tables__do">
-                <app-tabletasks></app-tabletasks>
-            </div>
-            <div class="tasks-container__bottom-part__left-tables__delegate">DELEGATE</div>
+      <div class="tasks-container__bottom-part__left-tables">
+        <div class="tasks-container__bottom-part__left-tables__do">
+          <app-tabletasks></app-tabletasks>
         </div>
-        <div class="tasks-container__bottom-part__right-tables">
-            <div class="tasks-container__bottom-part__right-tables__decide">DECIDE</div>
-            <div class="tasks-container__bottom-part__right-tables__delete">DELETE</div>
+        <div class="tasks-container__bottom-part__left-tables__delegate">
+          <app-tabletasks></app-tabletasks>
         </div>
+      </div>
+      <div class="tasks-container__bottom-part__right-tables">
+        <div class="tasks-container__bottom-part__right-tables__decide">
+          <app-tabletasks></app-tabletasks>
+        </div>
+        <div class="tasks-container__bottom-part__right-tables__delete">
+          <app-tabletasks></app-tabletasks>
+        </div>
+      </div>
     </div>
+  </ng-container>
+  <ng-container *appScreenSize="'mobile'">
+    <app-tasks-mobile-view></app-tasks-mobile-view>
+  </ng-container>
 </div>

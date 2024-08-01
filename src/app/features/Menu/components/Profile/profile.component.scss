@@ -19,3 +19,12 @@
        justify-content: center;
     }
 }
+
+@media (max-width: 1050px) {
+    .profile-container {
+        flex-direction: row-reverse;
+    }
+    .profile-container__profile-name {
+        flex: none;
+    }
+}

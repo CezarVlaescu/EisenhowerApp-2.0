@@ -15,10 +15,12 @@ import { HomepageMobileViewComponent } from './container-mobile/homepage-mobile-
     CommonModule,
     TasksModule,
     MenuModule,
-    SharedModule
+    SharedModule,
+    MenuModule
   ],
   exports: [
-    HomepageContainerComponent
+    HomepageContainerComponent,
+    HomepageMobileViewComponent  
   ]
 })
 export class HomepageModule { }

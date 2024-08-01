@@ -1,6 +1,13 @@
-<button mat-button [matMenuTriggerFor]="menu">Menu</button>
-<mat-menu #menu="matMenu">
-  <div *ngFor="let item of menuItems">
-    <app-button [button]="item"></app-button>
-  </div>
-</mat-menu>
+<div class="burger-menu-container">
+  <ng-container>
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+      <div *ngFor="let item of menuItems">
+        <app-button [button]="item"></app-button>
+      </div>
+    </mat-menu>
+  </ng-container>
+  <ng-container>
+    <app-profile></app-profile>
+  </ng-container>
+</div>

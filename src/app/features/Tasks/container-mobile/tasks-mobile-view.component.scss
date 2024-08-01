@@ -1,0 +1,54 @@
+.tasks-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 70vh; 
+    box-sizing: border-box; 
+}
+
+.tasks-container__top-part {
+    flex: 0 0 auto; 
+    padding-bottom: 10px; 
+}
+
+.tasks-container__top-part__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tasks-container__bottom-part {
+    display: flex;
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    -webkit-overflow-scrolling: touch; 
+    height: 100%; 
+}
+
+.task-panel {
+    flex: none;
+    min-width: 100%; 
+    height: 100%; 
+    box-sizing: border-box; 
+    border: 1px solid black; 
+    scroll-snap-align: start; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.do-tasks {
+    background-color: green;
+}
+
+.delegate-tasks {
+    background-color: grey;
+}
+
+.decide-tasks {
+    background-color: blue;
+}
+
+.delete-tasks {
+    background-color: red;
+}

@@ -1,0 +1,17 @@
+<div class="tasks-container">
+    <div class="tasks-container__top-part">
+        <div class="tasks-container__top-part__content">
+            <h1>Current day : Vineri 12/07/2024</h1>
+            <h1>Motto of the day: Never give up, always fight</h1>
+            <app-button [button]="buttonInput" (buttonClicked)="openDialog()"></app-button>
+        </div>
+    </div>
+    <div class="tasks-container__bottom-part">
+        <div class="task-panel do-tasks">
+            <app-tabletasks></app-tabletasks>
+        </div>
+        <div class="task-panel delegate-tasks">DELEGATE</div>
+        <div class="task-panel decide-tasks">DECIDE</div>
+        <div class="task-panel delete-tasks">DELETE</div>
+    </div>
+</div>

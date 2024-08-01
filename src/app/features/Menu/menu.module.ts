@@ -32,7 +32,8 @@ import { BurgerMenuMobileComponent } from './components/Menu-Elements/menu-mobil
   exports: [
     MenuContainerComponent,
     MenuElementsComponent,
-    ProfileComponent
+    ProfileComponent,
+    BurgerMenuMobileComponent
   ]
 })
 

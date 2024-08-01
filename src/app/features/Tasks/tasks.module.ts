@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { TasksContainerComponent } from './container/tasks-container.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { TasksMobileViewComponent } from './container-mobile/tasks-mobile-view.component';
 
 @NgModule({
   declarations: [
-    TasksContainerComponent
+    TasksContainerComponent,
+    TasksMobileViewComponent
   ],
   imports: [
     CommonModule,
