@@ -1,0 +1,24 @@
+import { Component } from '@angular/core';
+import { tasks } from 'src/app/shared/types/mockdata';
+
+export interface ITaskElement {
+  name: string;
+  hour: Date;
+}
+
+const doTasks = tasks.filter((task) => task.type === 'DO');
+const getObjectsDoTask = () => doTasks.map((task) => {
+  return {name: task.name, hour: task.hour}
+}) // To do, make a service for this functions, will need to apply for all tasks
+
+const ELEMENT_DATA_TASKS: ITaskElement[] = getObjectsDoTask();
+
+@Component({
+  selector: 'app-table-tasks-mobile',
+  templateUrl: './table-tasks-mobile.component.html',
+  styleUrls: ['./table-tasks-mobile.component.scss']
+})
+export class TableTasksMobileComponent {
+  displayedColumns: string[] = ['name', 'hour']
+  dataSource = ELEMENT_DATA_TASKS;
+}

@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     padding: 20px;
-    height: 84.2vh;
+    max-height: auto;
+    gap: 30px;
 
     &__top-part{
         flex: 0 0 10%;
@@ -57,5 +58,18 @@
                 background-color: red;
             }
         }
+    }
+}
+
+@media (max-width: 1260px) {
+    .tasks-container{
+        gap: 0px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .tasks-container{
+        justify-content: space-around;
+        gap: 50px;
     }
 }

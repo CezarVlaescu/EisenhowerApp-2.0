@@ -15,6 +15,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatTableModule} from '@angular/material/table';
 import { FormatterPipe } from './pipes/formatter.pipe';
 import { ScreenSizeDirective } from './directives/screen-size.directive';
+import { TableTasksMobileComponent } from './components/TableTasks/table-task-mobile/table-tasks-mobile.component';
 @NgModule({
   declarations: [
     DialogComponent,
@@ -22,6 +23,7 @@ import { ScreenSizeDirective } from './directives/screen-size.directive';
     TableTasksComponent,
     FormatterPipe,
     ScreenSizeDirective,
+    TableTasksMobileComponent,
   ],
   imports: [
     CommonModule,
@@ -41,6 +43,7 @@ import { ScreenSizeDirective } from './directives/screen-size.directive';
     TableTasksComponent,
     FormatterPipe,
     ScreenSizeDirective,
+    TableTasksMobileComponent
   ]
 })
 export class SharedModule { }

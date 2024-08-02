@@ -4,12 +4,12 @@ import { MenuContainerComponent } from './container/menu-container.component';
 import { MenuElementsComponent } from './components/Menu-Elements/menu-elements.component';
 import { ProfileComponent } from './components/Profile/profile.component';
 
-import {MatBadgeModule} from '@angular/material/badge';
+import { MatBadgeModule } from '@angular/material/badge';
 import { SharedModule } from 'src/app/shared/shared.module';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 import { BurgerMenuMobileComponent } from './components/Menu-Elements/menu-mobile/burger-menu-mobile.component';
 
 
@@ -27,7 +27,8 @@ import { BurgerMenuMobileComponent } from './components/Menu-Elements/menu-mobil
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    MatIconModule
   ],
   exports: [
     MenuContainerComponent,

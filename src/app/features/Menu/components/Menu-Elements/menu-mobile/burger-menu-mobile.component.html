@@ -1,6 +1,11 @@
 <div class="burger-menu-container">
   <ng-container>
-    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-icon
+      mat-button
+      [matMenuTriggerFor]="menu"
+      aria-hidden="false"
+      fontIcon="menu"
+    ></mat-icon>
     <mat-menu #menu="matMenu">
       <div *ngFor="let item of menuItems">
         <app-button [button]="item"></app-button>
