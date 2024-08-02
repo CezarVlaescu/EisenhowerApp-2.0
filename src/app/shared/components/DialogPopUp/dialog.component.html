@@ -4,7 +4,7 @@
     <div class="dialog-container__content__name_select">
       <div class="dialog-container__name_select__name">
         <h3>Task name</h3>
-        <input placeholder="Name" [(ngModel)]="task.name" />
+        <input placeholder="Name" [(ngModel)]="task.name" style="border: 1px solid black; padding: 7px" />
       </div>
       <div class="dialog-container__name_select__select">
         <h3>Select Hour</h3>
@@ -13,6 +13,7 @@
           type="datetime-local"
           matInput
           [(ngModel)]="task.hour"
+          style="border: 1px solid black; padding: 7px"
         />
       </div>
     </div>
@@ -44,14 +45,14 @@
         >Without a comment</mat-checkbox
       >
     </div>
-    <div *ngIf="task.isCommented">
+    <div *ngIf="task.isCommented" style="width: 100%;">
       <h3>Write a comment</h3>
       <mat-form-field>
         <mat-label>Add Comment</mat-label>
-        <textarea matInput [(ngModel)]="task.comments"></textarea>
+        <textarea matInput [(ngModel)]="task.comments" style="width: 100%;"></textarea>
       </mat-form-field>
     </div>
-    <mat-dialog-actions style="justify-content: space-around">
+    <mat-dialog-actions style="justify-content: space-around; width: 100%">
       <button mat-button (click)="onCreateTask()">Save</button>
       <button mat-button (click)="onNoClick()">Cancel</button>
     </mat-dialog-actions>
