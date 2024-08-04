@@ -4,7 +4,7 @@ export const MenuItems = [
         link: "homepage", 
     },
     {
-        name: 'Plan your gym day',
+        name: 'Gym Day',
         link: 'plangymday'
     },
     {
