@@ -1,0 +1,13 @@
+<form (ngSubmit)="submitForm(authForm.value, authForm.valid)" #authForm="ngForm">
+    <ng-content select="h3"></ng-content>
+    <label>
+        Username
+        <input type="text" name="email" placeholder="Enter your username" required />
+    </label>
+    <label>
+        Password
+        <input type="password" name="password" placeholder="Enter your passowrd" required/>
+    </label>
+    <ng-content select="app-remember-user"></ng-content>
+    <ng-content select="button"></ng-content>
+</form>
