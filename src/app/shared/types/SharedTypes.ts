@@ -9,7 +9,19 @@ export type TTask = {
     comments? : string;
 }
 
-export type ButtonObject = {
+export type TButtonObject = {
     name: string;
     link?: string;
+}
+
+export type TRegisterUserInput = {
+    username: string;
+    email: string;
+    password: string;
+    image?: string;
+}
+
+export type TLoginInput = {
+    username: string;
+    password: string;
 }

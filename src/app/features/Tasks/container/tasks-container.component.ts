@@ -2,7 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from 'src/app/shared/components/DialogPopUp/dialog.component';
 import { AddTaskServiceService } from 'src/app/shared/services/api/addTask/add-task-service.service';
-import { ButtonObject, TTask } from 'src/app/shared/types/SharedTypes';
+import { TButtonObject, TTask } from 'src/app/shared/types/SharedTypes';
 
 @Component({
   selector: 'app-tasks-container',
@@ -10,7 +10,7 @@ import { ButtonObject, TTask } from 'src/app/shared/types/SharedTypes';
   styleUrls: ['./tasks-container.component.scss']
 })
 export class TasksContainerComponent implements OnInit {
-  public buttonInput: ButtonObject = { name: 'Add Task'}
+  public buttonInput: TButtonObject = { name: 'Add Task'}
   public data? : TTask;
 
   constructor(

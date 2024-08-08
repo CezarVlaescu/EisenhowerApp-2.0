@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { ButtonObject } from '../../types/SharedTypes';
+import { TButtonObject } from '../../types/SharedTypes';
 
 
 @Component({
@@ -8,7 +8,7 @@ import { ButtonObject } from '../../types/SharedTypes';
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent {
-  @Input() button!: ButtonObject;
+  @Input() button!: TButtonObject;
   @Output() buttonClicked = new EventEmitter<void>();
 
   onClick() {

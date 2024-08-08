@@ -1,1 +1,23 @@
-<p>register works!</p>
+<div class="register-container">
+  <h1>Not registered yet?</h1>
+  <h3>Join us today!</h3>
+  <app-shared (subbmited)="registerUser($event)">
+    <h3>Register</h3>
+    <div register>
+      <label>
+        Confirm Password
+        <input
+          type="password"
+          name="confirm-password"
+          placeholder="Rewrite your password"
+        />
+      </label>
+      <label>
+        Profile Image
+        <input type="file" (change)="onFileChanged($event)" #fileInput />
+      </label>
+    </div>
+    <a link href="/login">Already registered? Log in!</a>
+    <button type="submit">Register</button>
+  </app-shared>
+</div>

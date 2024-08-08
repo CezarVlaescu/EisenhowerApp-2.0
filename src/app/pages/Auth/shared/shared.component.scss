@@ -1,0 +1,16 @@
+.shared-form-container {
+    border: 1px solid black;
+    width: 80vw;
+    height: auto;
+    background-color: white;
+    border-radius: 10%;   
+
+    &__inner{
+        height: 100%;
+        padding: 20px;
+        max-height: 60vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}

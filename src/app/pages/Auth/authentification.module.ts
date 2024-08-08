@@ -7,7 +7,6 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SharedComponent } from './shared/shared.component';
 import { FormsModule } from '@angular/forms';
-import { RememberUserComponent } from './login/components/remember-user.component';
 
 
 @NgModule({
@@ -15,7 +14,6 @@ import { RememberUserComponent } from './login/components/remember-user.componen
     LoginComponent,
     RegisterComponent,
     SharedComponent,
-    RememberUserComponent
   ],
   imports: [
     CommonModule,

@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
+onFileChanged($event: Event) {
+throw new Error('Method not implemented.');
+}
+registerUser($event: Event) {
+throw new Error('Method not implemented.');
+}
 
 }

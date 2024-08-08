@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
-import { TTask } from '../../types/SharedTypes';
+import { TTask } from 'src/app/shared/types/SharedTypes';
 
 const api = "http://localhost:3000/api"
 
