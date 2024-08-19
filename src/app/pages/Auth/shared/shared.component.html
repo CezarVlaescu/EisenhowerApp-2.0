@@ -4,8 +4,10 @@
   class="shared-form-container"
 >
   <div class="shared-form-container__inner">
-    <ng-content select="h3"></ng-content>
-    <label>
+    <div class="shared-form-container__inner__title">
+      <ng-content select="h3"></ng-content>
+    </div>
+    <label class="shared-form-container__inner__username">
       Username
       <input
         type="text"
