@@ -2,9 +2,8 @@
   <h1>Not registered yet?</h1>
   <h3>Join us today!</h3>
   <app-shared (subbmited)="registerUser($event)">
-    <h3>Register</h3>
-    <div register>
-      <label>
+    <div register class="register-container__inner">
+      <label class="register-container__inner__confirm">
         Confirm Password
         <input
           type="password"
@@ -12,7 +11,7 @@
           placeholder="Rewrite your password"
         />
       </label>
-      <label>
+      <label class="register-container__inner__confirm">
         Profile Image
         <input type="file" (change)="onFileChanged($event)" #fileInput />
       </label>

@@ -23,7 +23,7 @@ import { FormsModule } from '@angular/forms';
   exports: [
     LoginComponent,
     RegisterComponent,
-    SharedComponent
+    SharedComponent,
   ]
 })
 export class AuthentificationModule { }
