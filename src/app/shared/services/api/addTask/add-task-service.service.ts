@@ -13,7 +13,7 @@ export class AddTaskServiceService {
   constructor(private http : HttpClient) { }
   
   public createTaskAsync(task: TTask): Observable<TTask> {
-    return this.http.post<TTask>(`${api}/route`, task, {
+    return this.http.post<TTask>(`${api}`, task, {
       headers: {
         'Content-Type': 'application/json'
       }
@@ -23,6 +23,4 @@ export class AddTaskServiceService {
       return throwError(() => new Error("Error creating task"));
     }))
   }
-
-
 }

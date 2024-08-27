@@ -12,6 +12,15 @@
         />
       </label>
       <label class="register-container__inner__confirm">
+        Email
+        <input 
+        type="email"
+        name="email" 
+        placeholder="Your email address"
+        [(ngModel)]="emailAddress"
+        required />
+      </label>
+      <label class="register-container__inner__confirm">
         Profile Image
         <input type="file" (change)="onFileChanged($event)" #fileInput />
       </label>

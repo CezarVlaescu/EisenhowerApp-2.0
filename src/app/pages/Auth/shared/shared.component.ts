@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { TLoginInput } from 'src/app/shared/types/SharedTypes';
 
 @Component({
   selector: 'app-shared',
@@ -6,10 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./shared.component.scss']
 })
 export class SharedComponent {
-  constructor() {}
+  @Output() subbmited = new EventEmitter<TLoginInput>();
 
-    
-submitForm(arg0: any,arg1: any) {
-  throw new Error('Method not implemented.');
+  username: string = '';
+  password: string = '';
+
+  submitForm(value: any, valid: boolean | null) : void {
+   if(valid) {
+    const loginData: TLoginInput = {
+      username: value.username,
+      password: value.password
+    }
+    this.subbmited.emit(loginData);
+   }
   }
 }
