@@ -7,17 +7,17 @@
     <div class="shared-form-container__inner__title">
       <ng-content select="h3"></ng-content>
     </div>
-    <label class="shared-form-container__inner__username">
-      Username
+    <label class="shared-form-container__inner__fields">
+      Email
       <input
         type="text"
-        name="username"
-        placeholder="Enter your username"
-        [(ngModel)]="username"
+        name="email"
+        placeholder="Email address"
+        [(ngModel)]="email"
         required
       />
     </label>
-    <label class="shared-form-container__inner__username">
+    <label class="shared-form-container__inner__fields">
       Password
       <input
         type="password"

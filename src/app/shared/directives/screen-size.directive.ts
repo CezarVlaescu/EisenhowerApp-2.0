@@ -1,6 +1,6 @@
 import { Directive, OnInit, Input, TemplateRef, ViewContainerRef, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { ScreenSizeService } from '../services/mobile/screen-size.service';
+import { ScreenSizeService } from '../services/screen-size.service';
 
 @Directive({
   selector: '[appScreenSize]'

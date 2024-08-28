@@ -22,6 +22,16 @@ export type TRegisterUserInput = {
 }
 
 export type TLoginInput = {
-    username: string;
+    email: string;
     password: string;
+}
+
+export type TLoginResponse = {
+    TOKEN_KEY: string;
+}
+
+export type TUserData = {
+    username: string;
+    email?: string;
+    image?: string;
 }

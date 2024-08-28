@@ -9,13 +9,13 @@ import { TLoginInput } from 'src/app/shared/types/SharedTypes';
 export class SharedComponent {
   @Output() subbmited = new EventEmitter<TLoginInput>();
 
-  username: string = '';
+  email: string = '';
   password: string = '';
 
   submitForm(value: any, valid: boolean | null) : void {
    if(valid) {
     const loginData: TLoginInput = {
-      username: value.username,
+      email: value.email,
       password: value.password
     }
     this.subbmited.emit(loginData);
