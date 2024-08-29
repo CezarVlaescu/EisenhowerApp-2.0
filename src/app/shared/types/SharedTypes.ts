@@ -27,7 +27,7 @@ export type TLoginInput = {
 }
 
 export type TLoginResponse = {
-    TOKEN_KEY: string;
+    token: string;
 }
 
 export type TUserData = {

@@ -10,12 +10,12 @@ export class AuthService {
   constructor(private router: Router) { }
 
   public saveToken(token: string) : void {
-    window.localStorage.removeItem("TOKEN_KEY");
-    window.localStorage.setItem("TOKEN_KEY", token);
+    window.localStorage.removeItem("token");
+    window.localStorage.setItem("token", token);
   }
 
   public getToken() : string | null {
-    return window.localStorage.getItem("TOKEN_KEY") !== null ? window.localStorage.getItem("TOKEN_KEY") : null;
+    return window.localStorage.getItem("token") !== null ? window.localStorage.getItem("token") : null;
   }
 
   public getUserId() : string | null {
@@ -33,7 +33,7 @@ export class AuthService {
   }
 
   signOut() : void {
-    window.localStorage.removeItem("TOKEN_KEY");
+    window.localStorage.removeItem("token");
     window.sessionStorage.clear();
     this.router.navigate(['/login'])
     .then(() => window.location.reload());

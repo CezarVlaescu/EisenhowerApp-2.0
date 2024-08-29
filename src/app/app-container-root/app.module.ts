@@ -21,13 +21,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 
 // Interceptor
+import { TokenInterceptor } from '../core/interceptors/token.interceptor';
 
 // Services
 import { DataService } from '../shared/services/data.service';
 import { UserService } from '../core/services/auth/user.service';
 
 export function tokenGetter(){
-  return sessionStorage.getItem('TOKEN_KEY');
+  return sessionStorage.getItem('token');
 }
 
 
@@ -62,6 +63,7 @@ export function tokenGetter(){
   providers: [
     DataService,
     UserService,
+    TokenInterceptor,
     { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 3500}}
   ],
   bootstrap: [AppComponent],

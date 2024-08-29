@@ -38,7 +38,8 @@ export class LoginComponent implements OnInit {
 
     this.userService.signIn(this.loginInput).subscribe({
       next: (data: TLoginResponse) => {
-        this.authService.saveToken(data.TOKEN_KEY);
+        console.log("login api response", data)
+        this.authService.saveToken(data.token);
         this.isLoginFailed = false;
         this.snackBar.open('Login successful!', '✅', { duration: 3000 });
         this.onLogin();
