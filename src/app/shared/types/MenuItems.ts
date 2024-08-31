@@ -21,6 +21,5 @@ export const MenuItems = [
     },
     {
         name: "Logout",
-        link: "logout"
     },
 ]

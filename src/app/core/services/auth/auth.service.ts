@@ -24,7 +24,7 @@ export class AuthService {
 
     try {
       const decodedToken: any = jwtDecode(jwtToken);
-      return decodedToken?.sub || null;
+      return decodedToken?.UserId || null;
     }
     catch (error) {
       console.error("Invalid token:", error);
@@ -35,7 +35,6 @@ export class AuthService {
   signOut() : void {
     window.localStorage.removeItem("token");
     window.sessionStorage.clear();
-    this.router.navigate(['/login'])
-    .then(() => window.location.reload());
+    this.router.navigate(['/login']);
   }
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, of } from 'rxjs';
+import { map, Observable, of } from 'rxjs';
 import { AuthService } from './auth.service';
 import { DataService } from 'src/app/shared/services/data.service';
 import { TLoginInput, TLoginResponse, TRegisterUserInput, TUserData } from 'src/app/shared/types/SharedTypes';
@@ -21,6 +21,8 @@ export class UserService extends DataService {
     super(userApi, http)
   }
 
+  public userData! : TUserData;
+
   signIn(data: TLoginInput) : Observable<TLoginResponse> {
     return this.httpPrivate.post<TLoginResponse>(loginApi, data)
   }
@@ -29,9 +31,18 @@ export class UserService extends DataService {
     return this.createAsync(data);
   }
 
-  getUserById() : Observable<TUserData | null> {
+  getUserById(): Observable<TUserData | null> {
     const id = this.authService.getUserId();
-    if(!id) return of(null);
-    return this.getByIdAsync(id);
+    if (!id) return of(null);
+
+    return this.getByIdAsync(id).pipe(
+      map((user: any) => {
+        return {
+          username: user.name,
+          email: user.email,
+          image: user.image
+        } as TUserData;
+      })
+    );
   }
 }

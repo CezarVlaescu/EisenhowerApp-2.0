@@ -2,6 +2,8 @@ import { Component, OnInit} from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from 'src/app/shared/components/DialogPopUp/dialog.component';
 import { TButtonObject, TTask } from 'src/app/shared/types/SharedTypes';
+import { getRandomMotto } from 'src/app/shared/types/mottos';
+import { getDateUtil } from 'src/app/core/utils/getDateUtil';
 
 @Component({
   selector: 'app-tasks-container',
@@ -11,6 +13,8 @@ import { TButtonObject, TTask } from 'src/app/shared/types/SharedTypes';
 export class TasksContainerComponent implements OnInit {
   public buttonInput: TButtonObject = { name: 'Add Task'}
   public data? : TTask;
+  public motto = getRandomMotto();
+  public date = getDateUtil();
 
   constructor(
     private dialog: MatDialog,

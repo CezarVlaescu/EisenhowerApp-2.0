@@ -9,6 +9,13 @@ export type TTask = {
     comments? : string;
 }
 
+export type TTaskPoolResponse = {
+    doTasks?: TTask[];
+    decideTasks?: TTask[]
+    delegateTasks? : TTask[];
+    deleteTasks? : TTask[];
+}
+
 export type TButtonObject = {
     name: string;
     link?: string;

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { getDateUtil } from 'src/app/core/utils/getDateUtil';
 import { DialogComponent } from 'src/app/shared/components/DialogPopUp/dialog.component';
+import { getRandomMotto } from 'src/app/shared/types/mottos';
 import { TButtonObject, TTask } from 'src/app/shared/types/SharedTypes';
 
 @Component({
@@ -11,6 +13,8 @@ import { TButtonObject, TTask } from 'src/app/shared/types/SharedTypes';
 export class TasksMobileViewComponent {
   public buttonInput: TButtonObject = { name: 'Add Task'}
   public data? : TTask;
+  public motto = getRandomMotto();
+  public date = getDateUtil();
 
   constructor(
     private dialog: MatDialog

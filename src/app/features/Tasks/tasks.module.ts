@@ -16,7 +16,8 @@ import { TasksMobileViewComponent } from './container-mobile/tasks-mobile-view.c
     MatDialogModule
   ],
   exports: [
-    TasksContainerComponent
+    TasksContainerComponent,
+    TasksMobileViewComponent
   ]
 })
 export class TasksModule { }

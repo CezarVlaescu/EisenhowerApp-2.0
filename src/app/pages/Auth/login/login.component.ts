@@ -3,7 +3,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/core/services/auth/auth.service';
 import { UserService } from 'src/app/core/services/auth/user.service';
-import { TLoginInput, TLoginResponse } from 'src/app/shared/types/SharedTypes';
+import { TLoginInput, TLoginResponse, TTaskPoolResponse } from 'src/app/shared/types/SharedTypes';
 
 @Component({
   selector: 'app-login',
@@ -13,6 +13,7 @@ import { TLoginInput, TLoginResponse } from 'src/app/shared/types/SharedTypes';
 export class LoginComponent implements OnInit {
   public loginInput! : TLoginInput;
   public isLoginFailed : boolean = false;
+  public tasks: TTaskPoolResponse | null = null;
   errorMessage: string = "";
 
   constructor(
@@ -38,7 +39,6 @@ export class LoginComponent implements OnInit {
 
     this.userService.signIn(this.loginInput).subscribe({
       next: (data: TLoginResponse) => {
-        console.log("login api response", data)
         this.authService.saveToken(data.token);
         this.isLoginFailed = false;
         this.snackBar.open('Login successful!', '✅', { duration: 3000 });
@@ -52,12 +52,7 @@ export class LoginComponent implements OnInit {
     })
   }
 
-  public rememberUser($event: Event) {
-    throw new Error('Method not implemented.');
-  }
-
   private onLogin(){
     return this.route.navigate(['/homepage']);
   }
-
 }
