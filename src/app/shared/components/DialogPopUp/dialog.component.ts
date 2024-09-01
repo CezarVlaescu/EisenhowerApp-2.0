@@ -10,27 +10,34 @@ import { TTask } from '../../types/SharedTypes';
 export class DialogComponent {
   constructor(
     public dialogRef: MatDialogRef<DialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any
+    @Inject(MAT_DIALOG_DATA) public data: any,
   ) {
   }
 
   public task: TTask = {
     name: '',
     hour: new Date(),
-    type: 'DO',
+    type: 0,
     isCommented: false,
     comments: ''
   }
 
   public toggleComment(isCommented: boolean): void {
-    this.task.isCommented = isCommented; // true 
+    this.task.isCommented = isCommented;
   }
 
-  onNoClick() : void {
+  public onNoClick() : void {
     this.dialogRef.close();
   }
 
-  onCreateTask() : void {
-    return this.dialogRef.close(this.task)
+  public onCreateTask() : void {
+    switch (this.task.type) {
+      case "DO": this.task.type = 0; break;
+      case "DECIDE": this.task.type = 1; break;
+      case "DELEGATE": this.task.type = 2; break;
+      case "DELETE": this.task.type = 3; break;
+    }
+    this.dialogRef.close(this.task);
+    window.location.reload();
   }
 }

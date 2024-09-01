@@ -13,16 +13,16 @@
   </div>
   <div class="tasks-container-mobile__bottom-part">
     <div class="task-panel do-tasks">
-      <app-table-tasks-mobile></app-table-tasks-mobile>
-    </div>
-    <div class="task-panel delegate-tasks">
-      <app-table-tasks-mobile></app-table-tasks-mobile>
+      <app-table-tasks-mobile [tasks]="taskPool?.doTasks"></app-table-tasks-mobile>
     </div>
     <div class="task-panel decide-tasks">
-      <app-table-tasks-mobile></app-table-tasks-mobile>
+      <app-table-tasks-mobile [tasks]="taskPool?.decideTasks"></app-table-tasks-mobile>
+    </div>
+    <div class="task-panel delegate-tasks">
+      <app-table-tasks-mobile [tasks]="taskPool?.delegateTasks"></app-table-tasks-mobile>
     </div>
     <div class="task-panel delete-tasks">
-      <app-table-tasks-mobile></app-table-tasks-mobile>
+      <app-table-tasks-mobile [tasks]="taskPool?.deleteTasks"></app-table-tasks-mobile>
     </div>
   </div>
 </div>

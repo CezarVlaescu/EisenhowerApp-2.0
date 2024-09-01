@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../auth/auth.service';
 import { DataService } from 'src/app/shared/services/data.service';
-import { catchError, Observable, throwError } from 'rxjs';
+import { catchError, Observable, tap, throwError } from 'rxjs';
 import { TTask, TTaskPoolResponse } from 'src/app/shared/types/SharedTypes';
 
 @Injectable({
@@ -14,7 +14,7 @@ export class TasksService extends DataService {
 
   constructor(
     private authService : AuthService,
-    private httpPrivate : HttpClient
+    private httpPrivate : HttpClient,
   ) {
     super('', httpPrivate)
     this.taskApiRoute = this.createApiRoute();
@@ -36,14 +36,17 @@ export class TasksService extends DataService {
   }
 
   override createAsync(data: TTask): Observable<any> {
-      this.checkAndRefreshApiRoute();
-      return this.httpPrivate.post<any>(this.taskApiRoute, data).pipe(
-        catchError((err) => {
-          console.error(err);
-          return throwError(() => new Error("Error creating"));
-        })
-      );
-  }
+    this.checkAndRefreshApiRoute();
+    return this.httpPrivate.post<any>(this.taskApiRoute, data).pipe(
+      catchError((err) => {
+        console.error(err);
+        return throwError(() => new Error("Error creating"));
+      }),
+      tap(() => {
+        this.getAllAsync()
+      })
+    );
+ }
 
   override getAllAsync(): Observable<TTaskPoolResponse> {
       this.checkAndRefreshApiRoute();

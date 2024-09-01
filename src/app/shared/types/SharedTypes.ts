@@ -1,10 +1,8 @@
-export type TTaskType = "DO" | "DECIDE" | "DELEGATE" | "DELETE";
-
 export type TTask = {
     id?: number;
     name: string;
     hour: Date;
-    type: TTaskType;
+    type: any;
     isCommented: boolean;
     comments? : string;
 }

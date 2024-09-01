@@ -13,18 +13,18 @@
     <div class="tasks-container__bottom-part">
       <div class="tasks-container__bottom-part__left-tables">
         <div class="tasks-container__bottom-part__left-tables__do">
-          <app-tabletasks></app-tabletasks>
+          <app-tabletasks [tasks]="taskPool?.doTasks"></app-tabletasks>
         </div>
         <div class="tasks-container__bottom-part__left-tables__delegate">
-          <app-tabletasks></app-tabletasks>
+          <app-tabletasks [tasks]="taskPool?.delegateTasks"></app-tabletasks>
         </div>
       </div>
       <div class="tasks-container__bottom-part__right-tables">
         <div class="tasks-container__bottom-part__right-tables__decide">
-          <app-tabletasks></app-tabletasks>
+          <app-tabletasks [tasks]="taskPool?.decideTasks"></app-tabletasks>
         </div>
         <div class="tasks-container__bottom-part__right-tables__delete">
-          <app-tabletasks></app-tabletasks>
+          <app-tabletasks [tasks]="taskPool?.deleteTasks"></app-tabletasks>
         </div>
       </div>
     </div>

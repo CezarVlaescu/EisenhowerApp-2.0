@@ -1,17 +1,10 @@
-import { Component } from '@angular/core';
-import { tasks } from 'src/app/shared/types/mockdata';
+import { Component, Input, SimpleChanges } from '@angular/core';
+import { TTask } from 'src/app/shared/types/SharedTypes';
 
 export interface ITaskElement {
   name: string;
   hour: Date;
 }
-
-const doTasks = tasks.filter((task) => task.type === 'DO');
-const getObjectsDoTask = () => doTasks.map((task) => {
-  return {name: task.name, hour: task.hour}
-}) // To do, make a service for this functions, will need to apply for all tasks
-
-const ELEMENT_DATA_TASKS: ITaskElement[] = getObjectsDoTask();
 
 @Component({
   selector: 'app-table-tasks-mobile',
@@ -19,6 +12,19 @@ const ELEMENT_DATA_TASKS: ITaskElement[] = getObjectsDoTask();
   styleUrls: ['./table-tasks-mobile.component.scss']
 })
 export class TableTasksMobileComponent {
+  @Input() tasks: TTask[] | undefined = [];
+
   displayedColumns: string[] = ['name', 'hour']
-  dataSource = ELEMENT_DATA_TASKS;
+  dataSource : ITaskElement[] = [];
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if(changes['tasks']) this.updateDataSource();
+  }
+
+  private updateDataSource(): void {
+    this.dataSource = this.tasks ? this.tasks.map(task => ({
+      name: task.name,
+      hour: task.hour,
+    })) : [];
+  }
 }
