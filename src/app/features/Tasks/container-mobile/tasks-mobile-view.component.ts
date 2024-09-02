@@ -38,8 +38,7 @@ export class TasksMobileViewComponent {
     dialogRef.afterClosed()
     .subscribe((resultTask: TTask) => {
       if(resultTask) {
-        this.taskService
-      .createAsync(resultTask)
+      this.taskService.createAsync(resultTask)
       .subscribe({
         next: (resultTask : TTask) => {
           console.log("Task created succesfully", resultTask);
@@ -49,7 +48,6 @@ export class TasksMobileViewComponent {
         }
       }
       )}
-      else throw new Error('Task creation failed ');
     })
   }
 

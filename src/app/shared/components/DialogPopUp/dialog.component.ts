@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { TTask } from '../../types/SharedTypes';
 
@@ -7,12 +7,13 @@ import { TTask } from '../../types/SharedTypes';
   templateUrl: './dialog.component.html',
   styleUrls: ['./dialog.component.scss']
 })
-export class DialogComponent {
+export class DialogComponent implements OnInit {
   constructor(
     public dialogRef: MatDialogRef<DialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
   ) {
   }
+  public currentDateTime?: string;
 
   public task: TTask = {
     name: '',
@@ -20,6 +21,11 @@ export class DialogComponent {
     type: 0,
     isCommented: false,
     comments: ''
+  }
+
+  ngOnInit(): void {
+    const now = new Date();
+    this.currentDateTime = now.toISOString().slice(0, 16);
   }
 
   public toggleComment(isCommented: boolean): void {
@@ -38,6 +44,7 @@ export class DialogComponent {
       case "DELETE": this.task.type = 3; break;
     }
     this.dialogRef.close(this.task);
+    console.log(this.task);
     window.location.reload();
   }
 }

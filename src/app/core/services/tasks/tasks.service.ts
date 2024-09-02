@@ -68,9 +68,9 @@ export class TasksService extends DataService {
       );
   }
 
-  override deteleAsync(id: string): Observable<any> {
+  override deteleAsync(id: string | undefined, type?: any): Observable<any> {
       this.checkAndRefreshApiRoute();
-      return this.httpPrivate.delete<any>(`${this.taskApiRoute}/${id}`).pipe(
+      return this.httpPrivate.delete<any>(`${this.taskApiRoute}/${id}?type=${type}`).pipe(
         catchError((err) => {
           console.error(err);
           return throwError(() => new Error("Error deleting data"));

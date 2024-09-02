@@ -18,10 +18,12 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTableModule } from '@angular/material/table';
+import { MatIcon, MatIconModule } from '@angular/material/icon';
 
 import { FormatterPipe } from './pipes/formatter.pipe';
 import { ScreenSizeDirective } from './directives/screen-size.directive';
 import { TableTasksMobileComponent } from './components/TableTasks/table-task-mobile/table-tasks-mobile.component';
+import { TasksPopUpComponent } from './components/TasksPopUp/tasks-pop-up.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { TableTasksMobileComponent } from './components/TableTasks/table-task-mo
     FormatterPipe,
     ScreenSizeDirective,
     TableTasksMobileComponent,
+    TasksPopUpComponent,
   ],
   imports: [
     CommonModule,
@@ -45,6 +48,7 @@ import { TableTasksMobileComponent } from './components/TableTasks/table-task-mo
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatIconModule,
   ],
   exports: [
     DialogComponent,
@@ -52,7 +56,8 @@ import { TableTasksMobileComponent } from './components/TableTasks/table-task-mo
     TableTasksComponent,
     FormatterPipe,
     ScreenSizeDirective,
-    TableTasksMobileComponent
+    TableTasksMobileComponent,
+    TasksPopUpComponent,
   ]
 })
 export class SharedModule { }

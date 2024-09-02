@@ -17,6 +17,10 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
+
+    &__motto{
+        text-align: center;
+    }
 }
 
 .tasks-container-mobile__bottom-part {

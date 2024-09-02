@@ -44,8 +44,9 @@ export class DataService {
     }))
   }
 
-  deteleAsync(id: any) : Observable<any> {
-    return this.http.delete<any>(`${this.ApiUrl}/${id}`).pipe(
+  deteleAsync(id: any, type?: any) : Observable<any> {
+    const url = type ? `${this.ApiUrl}/${id}?type=${type}` : `${this.ApiUrl}/${id}`;
+    return this.http.delete<any>(url).pipe(
       catchError((err) => {
       console.error(err);
       return throwError(() => new Error("Error deleting data"));

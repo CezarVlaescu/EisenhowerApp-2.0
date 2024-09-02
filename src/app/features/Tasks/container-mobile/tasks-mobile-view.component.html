@@ -4,7 +4,9 @@
       <h1>Current day</h1>
       <h2>{{date}}</h2>
       <h1>Motto of the day</h1>
-      <h2>{{motto}}</h2>
+      <div class="tasks-container-mobile__top-part__content__motto">
+        <h2>{{motto}}</h2>
+      </div>
       <app-button
         [button]="buttonInput"
         (buttonClicked)="openDialog()"
