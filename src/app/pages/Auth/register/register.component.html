@@ -20,10 +20,16 @@
         [(ngModel)]="username"
         required />
       </label>
-      <label class="register-container__inner__confirm">
-        Profile Image
-        <input type="file" (change)="onFileChanged($event)" #fileInput />
-      </label>
+      <label class="register-container__inner__checksex">
+        <div>
+          Male
+          <input type="checkbox" (change)="onCheckboxChange('male')">
+        </div>
+        <div>
+          Female
+          <input type="checkbox" (change)="onCheckboxChange('female')">
+        </div>
+      </label>     
     </div>
     <a link href="/login">Already registered? Log in!</a>
     <button type="submit">Register</button>
