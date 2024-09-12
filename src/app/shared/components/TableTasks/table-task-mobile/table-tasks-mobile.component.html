@@ -12,7 +12,9 @@
           <ng-container matColumnDef="hour">
             <th mat-header-cell *matHeaderCellDef>Time</th>
             <td mat-cell *matCellDef="let task" class="scrollable-table__time">
-              {{ task.hour | formatter }}
+              <div (click)="openDialog(task)">
+                {{ task.hour | formatter }}
+              </div>
             </td>
           </ng-container>
           <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
